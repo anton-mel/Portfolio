@@ -1,624 +1,341 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/ico.png" type="image/x-icon">
-    <title>Melnychuk Anton</title>
-
-    <!-- styles -->
-
-    <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="dist/assets/owl.carousel.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" type="text/css" href="fullpage.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap" rel="stylesheet">
-    <style type="text/css">
-      
-    .mark{
-      position: fixed;
-      top: 100vh;
-      left: 100vw;
-      transform: translate(-150px, -150px);
-      height: 200px;
-      width: 200px;
-      z-index: 2;
-      display: flex;
-      border-radius: 50%;
-      align-items: center;
-      justify-content: center;
-    }
-    .marks{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      width: 145px;
-      right: 28.5px;
-      bottom: 28.5px;
-      height: 145px;
-      font-size: 50px;
-      transition: .2s;
-      opacity: .05;
-      color: #fff;
-      z-index: 99;
-      border-radius: 50%;
-    }
-    .mark svg{
-      -webkit-animation:spin 40s linear infinite;
-      -moz-animation:spin 40s linear infinite;
-      animation:spin 40s linear infinite;
-      font-size: 35px;
-      fill: #fff;
-      transition: .2s;
-      opacity: 0.05;
-    }
-    .mark:hover > svg{
-      opacity: .8;
-      transition: .2s;
-    }
-    .loader{
-      width: 100vw;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 9999999999999999999999999 !important;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      font-size: 40px;
-      font-weight: 1000;
-      background: #1c1d1f;
-    }
-    .owl-cont{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .owl-cont3{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 5px;
-    }
-    .block__work img{
-      transition: .2s;
-      border-radius: 5px;
-      filter: brightness(.9);
-    }
-    .block__work img:hover{
-      filter: brightness(.6);
-      transition: .2s;
-    }
-    .block__work3 img{
-      transition: .2s;
-      border-radius: 5px;
-      filter: brightness(.9);
-    }
-    .block__work3 img:hover{
-      filter: brightness(.6);
-      transition: .2s;
-    }
-    .block__work{
-      position: relative;
-      z-index: 0;
-      width: 100%;
-    }
-    .block__work3{
-      position: relative;
-      z-index: 0;
-      width: 100%;
-    }
-    .my-sl-tools{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: row;
-      padding-top: 0px;
-      position: absolute;
-      width: 100%;
-      z-index: 9;
-      font-size: 40px;
-      transition: .2s;
-      color: #fff;
-      border-radius: 5px !important;
-      height: 100%;
-      background: rgba(0,0,0,.5);
-      opacity: 0;
-    }
-    .my-sl-tools3{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: row;
-      padding-top: 0px;
-      position: absolute;
-      width: 100%;
-      z-index: 9;
-      font-size: 40px;
-      transition: .2s;
-      color: #fff;
-      border-radius: 5px !important;
-      height: 100%;
-      background: rgba(0,0,0,.5);
-      opacity: 0;
-    }
-    .block__work:hover > .my-sl-tools{
-      opacity: 1;
-      transition: .2s;
-    }
-    .status{
-      position: absolute;
-      top: 10px;
-      font-size: 12px;
-      color: #fff;
-      font-family: sans-serif;
-      font-weight: 200 !important;
-      letter-spacing: 1px;
-      right: 20px;
-    }
-    .status:before{
-      content: '';
-      left: -15px !important;
-      display: block;
-      top: 2px;
-      position: absolute;
-      height: 10px;
-      width: 10px;
-      border-radius: 50%;
-    }
-
-    .st1:before{
-      background: lime;
-    }
-    .st2:before{
-      background: gold;
-    }
-    .st3:before{
-      background: red;
-    }
-    .owl-dots{
-      display: none;
-    }
-    .owl-nav{
-      display: none;
-    }
-
-    .my__works{
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .my__works__c{
-      width: 100%;
-    }
-    .owl-carousel{
-      margin-left: 150px;
-      margin-right: 150px;
-      width: auto !important;
-    }
-    .my__works3{
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .my__works__c3{
-      width: 100%;
-    }
-    .owl-carousel3{
-      margin-left: 150px;
-      margin-right: 150px;
-      width: auto !important;
-    }
-
-
-    .page__guitar{
-      background: #1c1d1f;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-    }
-
-    @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-    @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-    @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-
-
-    @media (max-width: 1200px) {
-      .s p{
-        display: none;
-      }
-      .table__skills{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-      }
-    }
-    @media (max-width: 900px) {
-      .s p{
-        display: none;
-      }
-      .s i{
-        font-size: 15px;
-      }
-      .table__skills{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-      }
-      .s span h1{
-        font-size: 12px;
-      }
-      .s span img{
-        height: 20px;
-      }
-    }
-    @media (max-width: 700px){
-      .page__skills{
-        padding: 0 50px;
-      }
-    }
-
-
-    </style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Anton Melnychuk</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.css" integrity="sha512-fxF1t7b0mpb/ytjBeSu/OpgXxCVcX5/O8AJGYvHaWmNfi/lYLtttitFK17K4iKBva4iU9dcZ+BIV7dyD/nDdSw==" crossorigin="anonymous" />
+	<link rel="icon" href="ico.png">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+	<div class="loader"><h1><i class="fa fa-quote-left" aria-hidden="true"></i></h1></div>
+	
+	<style>
+		.loader{
+		  width: 100vw;
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  z-index: 9999999999999999999999999 !important;
+		  height: 100vh;
+		  display: none;
+		  justify-content: center;
+		  align-items: center;
+		  color: #fff;
+		  font-size: 140px;
+		  font-weight: 1000;
+		  background: #1c1d1f;
+		}
+		.loader h1{
+		  font-family: 'Teko', sans-serif;
+		  opacity: 0;
+		}	
+	</style>
+	
+	<div class="menup">
 
-      <div class="mark"><div class="marks"><i class="fa fa-cogs" aria-hidden="true"></i></div>
-      <svg viewBox="-39 -39 578 578"><path d="
-              M 250, 250
-              m -250, 0
-              a 250,250 0 1,0 500,0
-              a 250,250 0 1,0 -500,0
-            " fill="none" text="red" id="curved-text-production"></path>(<text textLength="1571" alignment-baseline="baseline"><textPath startOffset="00%" xlink:href="#curved-text-production" textLength="1571">&nbsp; • ukrainian • ukrainian • ukrainian • ukrainian • ukrainian • ukrainian</textPath></text>)</svg></div>
+						<div class="clm">x close</div>
 
+						<ul>
+							<li><a href="#h">Home</a></li>
+							<li><a href="#g">Guitar Playing</a></li>
+							<li><a href="#p">Programming</a></li>
+							<li><a href="#s">School</a></li>
+							<li><a href="#o">Contact</a></li>
+						</ul>
 
-
-            <div class="messanger">
-                <i class="fa fa-paper-plane" aria-hidden="true"></i>
-            </div>
-            <!-- <div class="next1">
-                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            </div> -->
-            <div class="__desc__head">
-                <div class="logo">
-                    Melnychuk Anton<br><a href="https://www.instagram.com/an.tony.ml/">@an.tony.ml</a>
-                </div>
-                <div class="__about__me">
-                    Finalist of Ukrainian Global Schoolars'21<br>
-                    Ambasador of Klitschko Foundation
-                </div>
-                <div class="__city__">
-                    Ukraine, Volyn' region<br>settlement Lokachi
-                </div>
-            </div>
-            <div class="__desc__head2">
-                <!-- <div class="mail">
-                    amelnychuk21@ugs.foundation
-                </div> -->
-                <div class="menu">
-                    <ul id="button" aria-describedby="tooltip">
-                        <li><a class="active" data-scroll href="#main">wellcome</a></li>
-                        <li><a data-scroll href="#me">about me</a></li>
-                        <li><a data-scroll href="#portfolio">portfolio</a></li>
-                        <li><a data-scroll href="#skills">my skills</a></li>
-                    </ul>
-                    <div id="tooltip" role="tooltip">Navigation<div id="arrow" data-popper-arrow></div></div>
-                </div>
-            </div>
-
-    <div class="loader"><h1><i class="fa fa-quote-left" aria-hidden="true"></i></h1></div>
-    <div class="after-title-nav">#READ #MORE #CV<br>#ACHIEVEMENTS #SKILLS</div>
-    <div class="__pages" id="fullpage">
-
-        <div class="scroll-btns">
-            <div class="top-btn"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
-            <div class="bot-btn"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
-        </div>
-        <div class="page__wellcome page section active" id="main">
-            <div class="decore">
-                <div class="idec1" id="scene2"><div class="ideci1 im1" data-depth="0.1"></div></div>
-                <div class="idec2" id="scene3"><div class="ideci2" data-depth="0.2"></div></div>
-                <div class="idec3" id="scene4"><div class="ideci1 im2" data-depth="0.3"></div></div>
-                <div class="idec4" id="scene5"><div class="ideci2" data-depth="0.2"></div></div>
-            </div>
-
-            <div class="header">
-                <div class="content__header">
-                    <div class="text__into__header">
-                        <div class="__into__header">
-                            I do websites<br>& apps design
-                        </div>
-                        <div class="__desc__header">
-                            <p>Having to create a web site first and formost I aim to reach simplicity with design that could freeth you for a moment, and from another side I want my website was with full functional that you whenever would needed in it. The greatest motivation for me is when you decided to visit these pages at lest with a small claim to enjoy the love to code I have placed here.</p>
-                            <span>2021 © All Rights Are Reserved</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="wrapper" id="scene">
-                    <!-- <img src="img/me.jpg" class="portrait"> -->
-                    <h1 class="glitch">Melnychuk Anton</h1>
-                </div>
-            </div>
-        </div>
-
-        <div class="page__skills page section" id="skills">
-              <div class="table__skills">
-                  <div class="s6 s">
-                      <div class="conts"><span><img src="img/py.svg"><h1>PYTHON</h1></span>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                          quis nostrud exercitation ullamco laboris.</p></div>
-                  </div>
-                  <div class="s4 s">
-                      <div class="conts"><span><img src="img/php.svg"><h1>PHP/PHPQUERY</h1></span>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut.</p></div>
-                  </div>
-                  <div class="s3 s">
-                      <div class="conts"><span><img src="img/js.svg"><h1>JS/REACT</h1></span>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                          quis nostrud exercitation ullamco laboris.</p></div>
-                  </div>
-                  <div class="s5 s">
-                      <div class="conts"><span><img src="img/sql.svg"><h1>MYSQL</h1></span>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor.</p></div>
-                  </div>
-                  <div class="s1 s">
-                      <div class="conts"><span><img src="img/html.svg"><h1>HTML/XML</h1></span>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                          quis.</p></div>
-                  </div>
-                  <div class="s2 s">
-                      <div class="conts"><span><img src="img/css.svg"><h1>CSS/SASS</h1></span>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                          quis nostrud.</p></div>
-                  </div>
-              </div>
-          </div>
-
-        <div class="page__portfolio page section" id="portfolio">
-            <div class="my__works">
-                <!-- <div id="tooltip2" role="tooltip">SCROLL IT<div id="arrow2" data-popper-arrow></div></div>
-                <h1 id="title_w">PORTFOLIO CAROUSEL</h1> -->
-                <div class="my__works__c">
-                    <div class="owl-carousel">
-                      <div class="owl-cont">
-                          <a href="https://retrash.tk/" class="block__work" target="_blank">
-
-                            <div class="my-sl-tools">
-                              <i class="fa fa-folder-open-o" aria-hidden="true"></i>
-                              <p class="status st1">active</p>
-                            </div>
-
-                            <img src="img/works/3/1.png">
-                          </a>
-                      </div>
-                      <div class="owl-cont">
-                          <a href="https://bedryk.tk/" class="block__work" target="_blank">
-
-                            <div class="my-sl-tools">
-                              <i class="fa fa-folder-open" aria-hidden="true"></i>
-                              <p class="status st3">disabled</p>
-                            </div>
-
-                            <img src="img/works/2/1.png">
-                          </a>
-                      </div>
-                      <div class="owl-cont">
-                          <a href="https://mebelua.tk/" class="block__work" target="_blank">
-
-                            <div class="my-sl-tools">
-                              <i class="fa fa-folder-open-o" aria-hidden="true"></i>
-                              <p class="status st2">launching</p>   
-                            </div>
-
-                            <img src="img/works/1/1.png">
-                          </a>
-                      </div>
-                      <div class="owl-cont">
-                          <a href="https://www.youtube.com/watch?v=zC3PDUuD4ik" class="block__work" target="_blank">
-
-                            <div class="my-sl-tools">
-                              <i class="fa fa-folder-open-o" aria-hidden="true"></i>
-                              <p class="status st1">active</p>
-                            </div>
-
-                            <img src="img/works/zastavka2.jpg">
-                          </a>
-                      </div>
-                      <div class="owl-cont">
-                          <a href="https://www.youtube.com/watch?v=qzRjAns0tbE" class="block__work" target="_blank">
-
-                            <div class="my-sl-tools">
-                              <i class="fa fa-folder-open" aria-hidden="true"></i>
-                              <p class="status st1">active</p>
-                            </div>
-
-                            <img src="img/works/zastavka1.jpg">
-                          </a>
-                      </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+	</div>
 
 
-        <!-- <div class="page__guitar page section" id="guitar">
-            <div class="my__works3">
-                <div class="my__works__c3">
-                    <div class="owl-carousel3">
-                      <div class="owl-cont3">
-                          <div class="block__work3">
+	<div class="header" id="h">
 
-                            <div class="my-sl-tools3">
-                              <i class="fa fa-folder-open-o" aria-hidden="true"></i>
-                              <p class="status st1">active</p>
-                            </div>
+			<div class="menu">
+				<div class="menu-cont">
+					<div class="logo">
+						<div>ANTON</div>
+						<div>MELNYCHUK</div>
+					</div>
+					<div class="nav">
+						<ul>
+							<li><span><a href="#h">Home</a></span></li>
+							<li><span><a href="#g">Guitar Playing</a></span></li>
+							<li><span><a href="#p">Programming</a></span></li>
+							<li><span><a href="#s">School</a></span></li>
+							<li><span><a href="#o">Contact</a></span></li>
+						</ul>
+						<div class="menuphone"><i class="fa fa-bars" aria-hidden="true"></i></div>
+					</div>
+				</div>
+			</div>
 
-                            <img src="img/works/3/1.png">
-                          </div>
-                      </div>
-                      <div class="owl-cont3">
-                          <div class="block__work3">
+			<div class="container headcon">
+				<div class="mephoto">
+					<img src="me.jpg">
+				</div>
+				<div class="descr">
+					<div class="contd">
+						<label>Hello! I am</label>
+						<div class="name">
+							<div>ANTON</div>
+							<div>MELNYCHUK</div>	
+						</div>
+						<p>I am an international student from western Ukraine.</p>
+						<div class="btms">
+							<div class="btmain"><a href="CV.pdf" style="text-decoration: none; color: rgba(0,0,0,.8)" target="_blank">DOWNLOAD CV</a></div>
+							<div class="btmain"><a href="https://www.youtube.com/channel/UCDgV363Se70lcbTyeR4MFiQ" style="text-decoration: none; color: rgba(0,0,0,.8)" target="_blank">MY PORTFOLIO</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-                            <div class="my-sl-tools3">
-                              <i class="fa fa-folder-open" aria-hidden="true"></i>
-                              <p class="status st3">disabled</p>
-                            </div>
+			<div class="container">
+				<div class="headbot">
+					<div class="title" data-aos="fade-up" data-aos-duration="500">I am interested in…</div>
+					<div class="slider">
+						<div class="blocks" data-aos="fade-up" data-aos-duration="500">
+							<label>01</label>
+							<h1>Guitar Playing</h1>
+							<p>I am a guitarist who performs in acoustic percussive fingerstyle and uploads to YouTube</p>
+						</div>
+						<div class="blocks" data-aos="fade-up" data-aos-duration="500">
+							<label>02</label>
+							<h1>Programming</h1>
+							<p>I am a software developer who creates projects for small businesses and non-profit organizations in Ukraine</p>
+						</div>
+						<div class="blocks" data-aos="fade-up" data-aos-duration="500">
+							<label>03</label>
+							<h1>Volunteering</h1>
+							<p>I am a volunteer who wants to generate meaningful impact through SMM, data analysis, and programming</p>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
 
-                            <img src="img/works/2/1.png">
-                          </div>
-                      </div>
-                      <div class="owl-cont3">
-                          <div class="block__work3">
+	<div class="body" id="g">
+		<div class="container">
 
-                            <div class="my-sl-tools3">
-                              <i class="fa fa-folder-open-o" aria-hidden="true"></i>
-                              <p class="status st2">launching</p>   
-                            </div>
+			<div class="music">
+				<div class="mp">
+					<h1 data-aos="fade-up" data-aos-duration="500">I AM A <span>GUITAR PLAYER</span> WHO WANTS TO GIFT <span>EMOTIONS</span> THROUGH MUSIC</h1>
 
-                            <img src="img/works/1/1.png">
-                          </div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-      </div> -->
+					<p data-aos="fade-up" data-aos-duration="500">I've been playing classical guitar for 6 years and recently discovered the 
+						percussive fingerstyle of Marcin Patrzalek, which prompted me to take up an acoustic guitar! In order to share 
+						my performances with others, I started a <span><a href="https://www.youtube.com/channel/UCDgV363Se70lcbTyeR4MFiQ" target="_blank">
+						YouTube channel</a></span> several months ago. I am also a self-taught piano player, and I look forward to studying 
+						music composition and theory in college.</p>
+				</div>
 
-        
-
-        <!-- <div class="page__me page section" id="ach">
-            <div class="descriotion__about">
-                <form class="top_about">
-                  <input type="search" class="sitem" name="search_item" placeholder="Search (Press /)">
-                  <ul>
-                    <li><a id="cv" href="files/c.pdf">Download CV</a></li>
-                    <li><a href="#">YouTube</a></li>
-                  </ul>
-                </form>
-                <ul>
-                    <h1 class="main__tt__des">Academic Achievements</h1>
-                    <li><span class="bef">2020 ~ 2021</span>2nd place, Olympiad in Physics, Oblast’</li>
-                    <li><span class="bef">2020 ~ 2021</span>2nd place, physics tournament, Oblast'</li>
-                    <li><span class="bef">2020 ~ 2021</span>2nd individual place, physics tournament, Oblast'</li>                
-                    <li><span class="bef">2019 ~ 2020</span>3rd place, Olympiad in IT, Oblast’</li>
-                    <li><span class="bef">2019 ~ 2020</span>3rd place, Olympiad in Math, Oblast'</li>
-                    <li><span class="bef">2019 ~ 2020</span>Laureate (5th place), All-Ukrainian online tournament in natural sciences</li>
-                    <li><span class="bef">2018 ~ 2019</span>3rd place, research work "MAN" theoretical physics section, Oblast'</li>
-                    <li><span class="bef">2018 ~ 2019</span>3rd place, physics tournament, 2018-2019, Oblast'</li>
-                    <li><span class="bef">2018 ~ 2019</span>3rd place, math tournament, Oblast'</li>
-                    <h1 class="main__tt__des">Extracurricular Achievements</h1>
-                    <li><span class="bef">2021 ~ 2022</span>Finalist of Ukrainian Global Schollars Program</li>
-                    <li><span class="bef">2021 ~ 2022</span>1st place, 3rd regional Festival Competition “Instrumental Opening” (Guitar), Lviv</li>
-                    <li><span class="bef">2020 ~ 2021</span>Alumni Klitschko Foundation “Skills Elevator”</li>
-                    <li><span class="bef">2020 ~ 2021</span>Member Ukrainian Youth Environmental Organization ESMU</li>
-                    <li><span class="bef">2020 ~ 2021</span>Volunteering at SMM in Klitschko Foundation</li>                
-                    <li><span class="bef">2019 ~ 2020</span>Informal education project "PeaceArt" by MAN, Youth Initiative "Heart in palms ", the public organization "This Child Here" and "Open Circle"</li>     
-                    <li><span class="bef">2019 ~ 2021</span>The head of the school government in Lokachi’s school gymnasium</li>          
-                    <li><span class="bef">2018 ~ 2019</span>Organized the local project School of Success Lokachi</li>
-                    <li><span class="bef">2018 ~ 2019</span>Alumni Klitschko Foundation "School of Success"</li>
-                    <li><span class="bef">2018 ~ 2019</span>1st place, International Children's Festival Art Competition "Sunflower" (Guitar), Kyiv</li>   
-                    <li><span class="bef">2017 ~ 2018</span>3rd place, Folk String Instrument Competition (Guitar), Oblast'</li>
-                    <h1 class="main__tt__des">Extracurricular Achievements ~ Athers</h1>
-                    <li><span class="bef">2020 ~ 2021</span>The applicant on scholarship to Lakefield College School Canada</li>
-                    <li><span class="bef">2020 ~ 2021</span>3rd tour participant United World College program</li>
-                    <li><span class="bef">2020 ~ 2021</span>The applicant in the reserved list European School Summer Camp in Georgia</li>
-                    <li><span class="bef">2020 ~ 2021</span>The applicant to Competitive College Club</li>                
-                    <li><span class="bef">2019 ~ 2020</span>Volunteer at homeless pets organization ("Laska"), Lutsk</li>
-                    <h1 class="main__tt__des">Additional Education</h1>
-                    <li><span class="bef">2014 ~ 2020</span>Alumni of Lokachi’s music school with regard, guitar</li>                
-                    <li><span class="bef">2016 ~ 2019</span>Computer Academy STEP</li>
-                    <li><span class="bef">2010 ~ 2021</span>Alumni of Lokachi’s gymnasium with GPA: 11.1</li>  
-                </ul>
-            </div>
-        </div> -->
+				<div class="videob" data-aos="fade-up" data-aos-duration="500">
+					<iframe src="https://www.youtube.com/embed/zC3PDUuD4ik?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div class="bv">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/1WgWeCgFUMQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/qzRjAns0tbE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</div>
 
 
-    </div>
+				<div class="awardlistm">
+					<h1 data-aos="fade-up" data-aos-duration="500"><span>AWAR​DS</span> AND <span>ACHIEVEMENTS</span></h1>
+					<ul>
+						<li data-aos="fade-up" data-aos-duration="500"><label>1st</label>place at International Festival-Competition "Parade of Stars", Lviv 2019 (among 300+ participants)</li>
+						<li data-aos="fade-up" data-aos-duration="500"><label>1st</label>place at National Festival-Competition “Sonyashnyk”, Kyiv 2018 (among 180+ participants)</li>
+						<li data-aos="fade-up" data-aos-duration="500"><label>3rd</label>place at the All-Ukrainian Folklore Competition, Lutsk 2019 (among 400+ participants)</li>
+						<li data-aos="fade-up" data-aos-duration="500"><label>3rd</label>place at the Folklore Guitar Competition, Lutsk 2018, 3rd regional level (among 600+ participants)</li>
+						<li data-aos="fade-up" data-aos-duration="500"><label>1st</label>place at the Regional Online Competition “Instrumental Vernisazh” 2020 (among 52 participants)</li>	
+					</ul>
+				</div>
+
+				<div class="q" data-aos="fade-up" data-aos-duration="500">
+					<h2>"</h2>
+					<div class="qq">
+						<h1>This will be our reply to violence: to make <br><span>music</span> <br>more intensely, more beautifully, more devotedly than ever before</h1>
+						<p>Leonard Bernstein</p>
+					</div>
+				</div>
+
+			</div>
 
 
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> 
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
-    <script src="dist/jquery.js"></script>
-    <script src="vendors/easings.min.js"></script>
-    <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script>
-    <script type="text/javascript" src="fullpage.min.js"></script>
-    <script type="text/javascript" src="aos.js"></script>
-    <script src="dist/owl.carousel.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
-    <script src="script.js"></script>
-    <script type="text/javascript">
-        new fullpage('#fullpage', {
-            //options here
-            navigation: true,
-            scrollingSpeed: 1000,
-            loopTop: true,
-            loopBottom: true,
-            autoScrolling:true,
-            scrollHorizontally: true
-        });
-    </script>
-    <script type="text/javascript">
-      $('.owl-carousel').owlCarousel({
-        loop:true,
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:1
-            },
-            1000:{
-                items:2
-            }
-        },
-        margin: 20,
-        autoplay:true,
-        autoplayTimeout:4000,
-        autoplayHoverPause:true,
-        autoHeight: true
-      });
 
-      // $('.owl-carousel3').owlCarousel({
-      //   loop:true,
-      //   responsive:{
-      //       0:{
-      //           items:1
-      //       },
-      //       600:{
-      //           items:1
-      //       },
-      //       1000:{
-      //           items:2
-      //       }
-      //   },
-      //   margin: 20,
-      //   autoplay:true,
-      //   autoplayTimeout:4000,
-      //   autoplayHoverPause:true,
-      //   autoHeight: true
-      // });
-    </script>
+		</div>
+	</div>
+
+	<div class="prog" id="p">
+		<div class="container">
+			<div class="code">
+				<h1 data-aos="fade-up" data-aos-duration="500">I AM A <span>SOFTWARE DEVELOPER</span> WHO USES CODE TO <span>CONTRIBUTE</span> TO MEANINGFUL PROJECTS</h1>
+				<p data-aos="fade-up" data-aos-duration="500">From a local clothing web store to all-Ukrainian youth projects, I 
+					created products for diverse audiences and using different tools but always brought the same passion to 
+					the process. Recently, I designed a website for ESMU, a non-profit environmental organization that 
+					educates Ukrainian youth about the ongoing climate crisis, and built a <span style="position: relative;"><a href="https://t.me/esmuratebot" target="_blank">TurBOTa project</a></span> — 
+					a bot that allows users to check whether the brand they are using is vegan and cruelty-free. During the fap year, I decided to participate
+					in IBM Initiative "Call for a Code" that connected 500,000 programmers all around the world to solve social problems through the code. 
+					I am also deepening my understanding of coding, design, and web security and am currently studying the 
+					basics of artificial intelligence to expand the scope of my projects.</p>
+
+				<div class="greenext" data-aos="fade-up" data-aos-duration="500">
+					<div class="context">
+						<img class="ggg" src="icon.png">
+
+						<div class="descrext">
+							<h1>Check the cruelty-free status of the brands<br>faster with TurBOTa for Chrome!</h1>
+							<h5>Acquiring products that are not tested on animals encourages brands to move to a cruelty-free philosophy and be certified by PETA (People for the Ethical Treatment of Animals). In-vitro testing and safe micro-dosing of human volunteers can replace cruel and immoral animal testing. The culture of cruelty-free consumption is not widespread in Ukraine today, so our team is inspired by the fact that TurBOTA will accelerate its development among the younger generation. Download this extension to be aware of brands that ignore this issue or use non-natural materials for their products.
+								<br><br>
+								TurBOTa extension does NOT collect users' data and is free of advertisements.
+							</h5>
+							<div class="contextbut"><a target="_blank" href="https://chrome.google.com/webstore/detail/turbota/pkaofffddmleggdkmemhadkbbfiaipfa?hl=uk" class="butext">DOWNLOAD EXTENSION<i class="fa fa-cloud-download" style="margin-left: 7px;" aria-hidden="true"></i></a></div>
+							<!-- <img class="exttt" src="ext.png"> -->
+						</div>
+					</div>
+				</div>
+
+				<img class="exts" src="exts.png" data-aos="fade-up" data-aos-duration="500">
+
+				<div class="imgext" data-aos="fade-up" data-aos-duration="500">
+					<img src="ext.png" class="extl">
+					<div class="rightext">
+						<img src="bg.png">
+					</div>
+				</div>
+
+				<div class="listl" data-aos="fade-up" data-aos-duration="500">
+					<ul>
+						<li>#PYTHON</li>
+						<li>#PHP</li>
+						<li>#JS/VUE</li>
+						<li>#SQL/MYSQL</li>
+						<li>#HTML/XML</li>
+						<li>#CSS/SASS</li>
+					</ul>
+				</div>
+
+				<div class="sites" data-aos="fade-up" data-aos-duration="500">
+					<a href="https://esmu.ga/turbota/bot.php" target="_blank" class="site"><img src="site.png"></a>
+					<div class="rowsites">
+						<a href="https://retrash.tk/" target="_blank" class="site"><img src="rt.png"></a>
+						<a href="#" target="_blank" class="site"><img src="siteph.png"></a>
+					</div>
+				</div>
+
+				<div class="lineph">
+					<img src="ph0.png" data-aos="fade-up" data-aos-duration="500">
+					<img src="ph1.png" data-aos="fade-up" data-aos-duration="500">
+					<img src="ph2.png" data-aos="fade-up" data-aos-duration="500">
+					<img src="ph3.png" data-aos="fade-up" data-aos-duration="500">
+					<img src="ph4.png" data-aos="fade-up" data-aos-duration="500">
+					<img src="ph5.png" data-aos="fade-up" data-aos-duration="500">
+				</div>
+
+				<h1 data-aos="fade-up" style="margin-top: 60px;" data-aos-duration="500">DO NOT JUST <span>PROGRAM</span> BUT <span>EXPLORE</span> (CRM)</h1>
+			
+				<div class="crm">
+					<img src="crm0.png" data-aos="fade-up" data-aos-duration="500">
+					<img src="crm1.png" data-aos="fade-up" data-aos-duration="500">
+					<img src="crm2.png" data-aos="fade-up" data-aos-duration="500">
+					<img src="crm3.png" data-aos="fade-up" data-aos-duration="500">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="gov" id="s">
+		<div class="container">
+			<div class="gg">
+
+				<div class="turcont" data-aos="fade-up" data-aos-duration="500"><img class="turph" src="tur.jpg"></div>
+				<style type="text/css">
+					.turcont{
+						width: 100%;
+						height: 500px;
+						overflow: hidden;
+						display: flex;
+						align-items: center;
+						margin-bottom: 100px;
+						border-radius: 20px;
+						justify-content: center;
+					}
+					.turph{
+						width: 100%;
+						filter: grayscale(1);
+						cursor: pointer;
+						transition: .1s;
+					}
+					.turph:hover{
+						filter: grayscale(0);
+						transition: .1s;
+					}
+				</style>
+				
+				<div class="schoolaw">
+					<h1 data-aos="fade-up" data-aos-duration="500"><span>ACADEMIC ACHIEVEMENTS</span> GPA: 10.9/12</h1>
+					<div class="slidera">
+						<div class="ac" data-aos="fade-up" data-aos-duration="500"><label>3rd</label><p>place at the regional research competition in theoretical physics (among 20+ participants)</p></div>
+						<div class="ac" data-aos="fade-up" data-aos-duration="500"><label>2nd</label><p>place at the regional physics tournament (among 15 teams)</p></div>
+						<div class="ac" data-aos="fade-up" data-aos-duration="500"><label>2nd</label><p>place at the regional stage of the Physics Olympiad (among 700+ students)</p></div>
+						<div class="ac" data-aos="fade-up" data-aos-duration="500"><label>3rd</label><p>place at the regional stage of the Mathematics Olympiad (among 800+ students)</div>
+						<div class="ac" data-aos="fade-up" data-aos-duration="500"><label>3rd</label><p>place at the regional stage of the IT Olympiad (among 300+ students)</p></div>
+					</div>
+				</div>
+
+
+				<div class="endgg">
+					<h1 data-aos="fade-up" data-aos-duration="500">SCHOOL GOVERNMENT & <br><span>SCHOOL OF SUCCESS</span> PROJECT</h1>
+					<p data-aos="fade-up" data-aos-duration="500">I have organized a cycle of three local «School of Success» projects 
+						with 120+ participants and 20+ motivational speakers from all over Ukraine. We fundraised $350+ for further 
+						projects and events at my school. I received the “Best Project” award from the  <span style="position: relative;"><a href="kf.pdf" target="_blank">Klitschko Foundation</a></span>
+						and was mentioned in the report.</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="footerq" id="o">
+		<div class="container2">
+			<div class="ff">
+				<h1 data-aos="fade-up" data-aos-duration="500">FEEL FREE TO<br>
+CONTACT ME!</h1>
+				<ul>
+					<li data-aos="fade-up" data-aos-duration="500">
+						<label>Email</label>
+						<p>amelnychuk21@ugs.foundation</p>
+					</li>
+					<li data-aos="fade-up" data-aos-duration="500">
+						<label>Location</label>
+						<p>Lokachi, Volyn, Ukraine</p>
+					</li>
+					<li data-aos="fade-up" data-aos-duration="500">
+						<label>Phone number</label>
+						<p>+380936553286</p>
+					</li>
+					<li data-aos="fade-up" data-aos-duration="500">
+						<label>Social Networks</label>
+						<p>@an.tony.ml</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="line">
+		<div class="container2">
+			<div class="bw">
+				<div class="tt"><span>Website developed by <a href="#">Anton Melnychuk</a></span>
+				<b>UGS Finalists'21</b></div>
+				<div class="tops">SCROLL TOP</div>
+			</div>
+		</div>
+	</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="main.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
